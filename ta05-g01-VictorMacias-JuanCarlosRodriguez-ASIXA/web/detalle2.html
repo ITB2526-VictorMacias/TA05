@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Victor Macias</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">VICTOR MACIAS</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="proyectos.html">Todos los Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  <main>
+        <section>
+            <h1>Proyecto: Automatización de Usuarios</h1>
+            <p><strong>Fecha:</strong> Noviembre 2025 | <strong>Asignatura:</strong> Sistemas Operativos</p>
+        </section>
+
+        <section>
+            <img src="img/proyecto1.jpg" alt="Terminal de Linux" class="imagen-detalle">
+
+            <h2>Descripción del Script</h2>
+            <p>
+                En el entorno de administración de sistemas, la eficiencia es clave. Este proyecto consistió en la creación de un 
+                script en Bash para automatizar la creación masiva de usuarios en un servidor Ubuntu Server.
+            </p>
+            <p>
+                El script lee un archivo `.csv` que contiene nombres, departamentos y contraseñas temporales. Automáticamente crea el usuario,
+                le asigna su grupo correspondiente y configura una carpeta personal con los permisos adecuados (chmod/chown).
+            </p>
+
+            <h3>Fragmento de código destacado:</h3>
+            <div style="background-color: #1e1e1e; color: #dcdcdc; padding: 15px; border-radius: 5px; font-family: 'Courier New', monospace; overflow-x: auto;">
+                #!/bin/bash<br>
+                # Bucle para leer el archivo de empleados<br>
+                while IFS=, read -r nombre grupo; do<br>
+                &nbsp;&nbsp;if [ ! -d "/home/$nombre" ]; then<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;useradd -m -g "$grupo" -s /bin/bash "$nombre"<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;echo "Usuario $nombre creado con éxito."<br>
+                &nbsp;&nbsp;fi<br>
+                done < empleados.txt
+            </div>
+
+            <br>
+            <h3>Retos superados:</h3>
+            <ul>
+                <li>Gestión de permisos de usuarios y grupos en Linux.</li>
+                <li>Validación de datos de entrada para evitar errores en la ejecución.</li>
+                <li>Automatización de tareas repetitivas mediante bucles.</li>
+            </ul>
+            
+            <br><br>
+            <a href="proyectos.html" class="boton">&larr; Volver a todos los proyectos</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> - Desarrollado por Victor Macias</p>
+        <div class="socials">
+            <a href="#">GitHub</a> | <a href="#">LinkedIn</a>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

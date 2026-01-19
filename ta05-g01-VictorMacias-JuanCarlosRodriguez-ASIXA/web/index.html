@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Victor Macias</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">VICTOR MACIAS</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="proyectos.html">Todos los Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   <main>
+        <section id="sobre-mi">
+            <div class="presentacion">
+                <img src="img/perfil.jpg" alt="Foto de Victor" class="foto-perfil">
+                
+                <div class="texto-presentacion">
+                    <h1>Hola, soy Victor Macais</h1>
+                    <p>
+                        Estudiante de ASIX apasionado por la tecnología, la administración de sistemas 
+                        y el desarrollo web. Bienvenido a mi portafolio personal.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="destacados">
+            <h2>Proyectos Destacados</h2>
+            
+            <article class="card">
+                <img src="img/proyecto2.jpg" alt="Web Corporativa">
+                <h3>Proyecto 1: Web Corporativa</h3>
+                <p>Diseño de una página web responsiva para empresa tecnológica.</p>
+                <a href="detalle1.html" class="boton">Ver más detalles</a>
+            </article>
+
+            <article class="card">
+                <img src="img/proyecto1.jpg" alt="Script Linux">
+                <h3>Proyecto 2: Gestión de Redes</h3>
+                <p>Script en Bash para automatización de usuarios en servidores.</p>
+                <a href="detalle2.html" class="boton">Ver más detalles</a>
+            </article>
+        </section>
+
+        <aside id="contacto">
+            <h2>Contacta conmigo</h2>
+            <form id="miFormulario">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" pattern="[A-Za-z ]+" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> - Desarrollado por Victor Macias</p>
+        <div class="socials">
+            <a href="#">GitHub</a> | <a href="#">LinkedIn</a>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
